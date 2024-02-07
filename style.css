@@ -1,165 +1,95 @@
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'Poppins', sans-serif;
-	box-sizing: border-box;
-}
-body{
-	background: #080808;
-	color: #fff;
-}
-#header{
-	width: 100%;
-	height: 100vh;
-	background-image: url(images/background.jpeg);
-	background-size: cover;
-	background-position: center;
-}
-.container{
-	padding: 10px 10%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Text</title>
+  <style>
+    body {
+      background-color: #b3e0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-nav{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
+    #minecraft-text {
+      text-align: center;
+    }
 
-.logo{
-	width: 140px;
-}
+    .minecraft-letter {
+      font-family: 'Minecraft', sans-serif;
+      font-size: 36px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
 
-nav ul li {
-	display: inline-block;
-	list-style: none;
-	margin: 10px 20px;
+    .block {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #000;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+      background: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+      box-shadow: 
+        -2px -2px 0 #ffffff, 
+        -4px -4px 0 #c7c7c7,
+        inset 2px 2px 0 #414141,
+        inset -2px -2px 0 #c7c7c7;
+      animation: colorChange 2s infinite alternate;
+    }
 
-}
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+        background-size: 300% 300%;
+        background-position: 0% 50%;
+      }
+      100% {
+        background: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+        background-size: 300% 300%;
+        background-position: 100% 50%;
+      }
+    }
 
-nav ul li a{
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-	position: relative;
+    .heart {
+      font-size: 100px;
+      color: red;
+      animation: heartbeat 1s infinite alternate;
+    }
 
-
-}
-nav ul li a::after{
-	content: '';
-	width: 0%;
-	height: 3px;
-	background: aqua;
-	position: absolute;
-	left: 0;
-	bottom: -6px;
-	transition: 0.5s;
-
-}
-nav ul li a:hover::after{
-	width: 100%;
-
-}
-.header-text{
-	margin-top: 20%;
-	font-size: 30px;
-}
-.header-text h1{
-	font-size: 60px;
-	margin-top: 20px;
-}
-.header-text h1 span{
-	color: aqua;
-
-}
-/*-----------about---------*/
-#about{
-	padding: 80px 0;
-	color: aqua;
-}
-.row{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-.about-col-1{
-	flex-basis: 35%;
-}
-.about-col-1 img{
-	width: 50%;
-	border-radius: 15px;
-	float: left;
-	padding: 5px;
-}
-.about-col-2{
-	flex-basis: 60%;
-
-}
-.sub-title{
-	font-size: 45px;
-	font-weight: 600;
-	color: #ff004f;
-}
-.tab-titles{
-	display: flex;
-	margin: 20px 0 40px;
-}
-.tab-links{
-	margin-right: 50px;
-	font-size: 18px;
-	font-weight: 500;
-	cursor: pointer;
-	position: relative;
-}
-.tab-links::after{
-	content: '';
-	width: 0;
-	height: 1%;
-	background: aqua;
-	position: absolute;
-	left: 0;
-	bottom: 457px;
-	transition: 0.5s;
-}
-.tab-links.active-link::after{
-	width: 55%;
-}
-.tab-contents ul li{
-	list-style: none;
-	margin: 20px 0 20%;
-}
-.tab-contents ul li span{
-	color: #ff004f;
-	font-size: 25px;
-	font-weight: 600;
-	
-}
-
-
-/* Update the CSS for navigation links */
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-	position: relative;
-	transition: color 0.3s;
-}
-
-nav ul li a:hover {
-	color: aqua; /* Change the link color on hover */
-}
-
-/* Add specific styling for individual names */
-nav ul li a[href="#Crzhna"]:hover,
-nav ul li a[href="#Veron"]:hover,
-nav ul li a[href="#Ison"]:hover,
-nav ul li a[href="#Rasheed"]:hover,
-nav ul li a[href="#Vivien"]:hover,
-nav ul li a[href="#Warren"]:hover,
-nav ul li a[href="#Alec"]:hover,
-nav ul li a[href="#Candy"]:hover,
-nav ul li a[href="#Eciell"]:hover {
-	color: #ff004f; /* Custom color on hover */
-	font-weight: bold; /* Make the name bold on hover */
-}
+    @keyframes heartbeat {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="minecraft-text">
+    <div class="minecraft-letter">
+      <div class="block">O</div>
+      <div class="block">K</div>
+      <div class="block">I</div>
+      <div class="block">I</div>
+    </div><br>
+    <div class="minecraft-letter">
+      <div class="block">S</div>
+      <div class="block">E</div>
+      <div class="block">E</div>
+    </div> <br>
+    <div class="minecraft-letter">
+      <div class="block">Y</div>
+      <div class="block">A</div>
+      <div class="block">!</div>
+      <div class="block">!</div>
+    </div>
+    <div class="heart">&hearts;</div>
+  </div>
+</body>
+</html>
